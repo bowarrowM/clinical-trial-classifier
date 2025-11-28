@@ -148,7 +148,7 @@ Content-Type: application/json
 }
 ```
 
-## 📈 Model Performance
+## Model Performance
 
 Expected metrics on test set:
 
