@@ -64,7 +64,7 @@ Output: `clinical_trial_data.csv` (500 patients)
 ### 3. Preprocess Data
 
 ```bash
-python preprocess_data.py
+python data_preprocess.py
 ```
 
 Output: `train_data.csv`, `val_data.csv`, `test_data.csv`
@@ -82,7 +82,7 @@ Output: `./clinical_trial_model/` directory
 ### 5. Evaluate Model
 
 ```bash
-python evaluate_model.py
+python model_evaluate.py
 ```
 
 Shows classification report, confusion matrix, and sample predictions.
@@ -90,7 +90,7 @@ Shows classification report, confusion matrix, and sample predictions.
 ### 6. Test LLM Reasoning
 
 ```bash
-python llm_reasoning.py
+python llm_reasonings.py
 ```
 
 Demonstrates interpretable eligibility explanations.
@@ -108,7 +108,7 @@ Server runs on `http://localhost:8000`
 In a new terminal:
 
 ```bash
-python test_api.py
+python api_testing.py
 ```
 
 ##  API Endpoints
