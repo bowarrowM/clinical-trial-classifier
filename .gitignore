@@ -3,22 +3,36 @@
 *.pt
 *.pkl
 
-# Large datasets
+# Data files (keep model, exclude data)
+*.json
+!label_encoders.json
 *.csv
 *.zip
 *.tar.gz
 
-# Virtual Environment
-venv/
-.venv/
-
-# Python compiled files
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
 
-# IDE files (e.g., VS Code)
+
+
+# IDE
 .vscode/
+.idea/
+*.swp
+*.swo
 
-# Logs and system files
-*.log
+# OS
 .DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+model_output/
