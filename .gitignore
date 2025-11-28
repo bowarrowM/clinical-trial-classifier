@@ -1,0 +1,24 @@
+# Models / weights
+*.h5
+*.pt
+*.pkl
+
+# Large datasets
+*.csv
+*.zip
+*.tar.gz
+
+# Virtual Environment
+venv/
+.venv/
+
+# Python compiled files
+__pycache__/
+*.pyc
+
+# IDE files (e.g., VS Code)
+.vscode/
+
+# Logs and system files
+*.log
+.DS_Store
