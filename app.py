@@ -1,14 +1,17 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from typing import Optional, List
+import uvicorn
+from contextlib import asynccontextmanager
+import os
+
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from llm_reasonings import ClinicalReasoningEngine
-import uvicorn
-from contextlib import asynccontextmanager
 
 
-
+#app initialization and model loading
 class ModelLoader:
     def __init__(self):
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -45,6 +48,16 @@ app = FastAPI(
     description="AI-powered clinical trial eligibility screening system",
     version="1.0.0",
     lifespan=lifespan
+)
+
+# CORS middleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], # -----------> vercel domain here
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # Request/Response models
